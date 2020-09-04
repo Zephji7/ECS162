@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login-protected homepage</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--  extra protected stylesheet for this page -->
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="seeker-finder.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Montserrat"
+          rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <main id="homepage" class="lightblue">
+        <div class="imageWrapper">
+          <img src="Logo.png">
+        </div>
+
+        <!-- homepage -->
+        <div id="fshomepage">
+          <div id="finder">
+            <h1 class="hpprompt">Did you find something?</h1>
+              <button class="yellow sfbutton">
+              I'm a finder
+              </button>
+          </div>
+
+          <div id="seeker">
+            <h1 class="hpprompt">Or are you looking for something?</h1>
+              <button class="deepblue sfbutton">
+              I'm a seeker
+              </button>
+          </div>
+        </div>
+
+      
+        <!--page 1 -->
+        <div id="finderhomepage" class="pageTemp animafading">
+          <h1 class="outertitle">Input the found item</h1>
+          <div class="item">
+            <div id="finderitemp1" class="itempage">
+              <p class="itemline">Title</p>
+                <div id="fmsgtitle" class="msg editbleContent" contenteditable="true"></div>
+              <p class="itemline">Category</p>
+              <form>
+                <input list="categories1" type="text" name="category" id="fmsgcategory" class="msg inputCategory">
+                <datalist id="categories1">
+                  <option value="Electronics"></option>
+                  <option value="Collectibles & Art"></option>
+                  <option value="Fashion"></option>
+                  <option value="Home & Garden"></option>
+                  <option value="Sporting Goods"></option>
+                  <option value="Health & Beauty"></option>
+                  <option value="Toys & Hobbies"></option>
+                  <option value="Books, Movies & Music"></option>
+                  <option value="Business & Industrial"></option>
+                  <option value="eBay Motors"></option>
+                  <option value="Others"></option>
+                </datalist>
+              </form>
+              <p class="itemline">Description</p>
+                <div id="fmsgdescription" class="msg msgdescription editbleContent" contenteditable="true"></div>
+              <p class="itemline">Attach a photo (optional)</p>
+              <div id="uploadControl">
+                <label for="imgUploader" id="fchooseFile" class="itemline chooseFile">Choose File</label>
+                <input type="file" id="imgUploader" accept="image/png,.jpeg,.jpg, image/gif">
+                <div id="imgName" class="itemline editbleContent"></div>
+              </div>
+              <div class="amenddiv"><button class="npButton">Next</button></div>
+            </div>
+
+
+            <!--page 2-->
+            <div id="finderitemp2" class="itempage animafading">
+              <p class="itemline">Date & Time</p>
+              <div class="dateNtime">
+                <input type="date" id="founddate" name="date" class="dNtdate msg">
+                <input type="time" id="foundtime" name="time" class="dNttime msg">
+              </div>
+              <p class="itemline">Location</p>
+              <input id="finderLocation" class="msg inputLocation" type="text" placeholder="Memorial Union, Shields Avenue, Davis, CA">
+              <div class="googleMap"></div>
+              <div class="amenddiv"><button class="npButton">Submit</button></div>
+            </div>
+          </div>
+
+          <h1 class="outertitle">Or search for existing requests</h1>
+          <div class="searchBox">
+            <img src="search-solid.svg"/>
+          </div>
+        </div>
+
+        <!--searching page-->
+        <div id="findersearchpage" class="pageTemp animafading">
+          <h1 class="outertitle">Search for existing reqeusts</h1>
+          <div class="searchBox">
+            <p id="findersearchtext" class="searchtext editbleContent" contenteditable="true"></p>
+            <img src="search-solid.svg"/>
+          </div>
+
+          <div class="item searchpagebgTemp">
+            <div id="finderitemsearch" class="itempage">
+              <p class="itemline">Date & Time</p>
+              <div class="searchdateNtime">
+                <input type="date" id="fsearchstartdate" name="startDate" class="searchdate msg">
+                <input type="time" id="fsearchstarttime" name="startTime" class="searchtime msg">
+                <div class="itemline search_to">to</div>
+                <input type="date" id="fsearchenddate" name="endDate" class="searchdate msg">
+                <input type="time" id="fsearchendtime" name="endTime" class="searchdate msg">
+              </div>
+              <p class="itemline">Category</p>
+              <!--category input-->
+              <form>
+                <input list="categories2" name="category" id="findersearchcategory" class="msg inputCategory">
+                <datalist id="categories2">
+                  <option value="Electronics"></option>
+                  <option value="Collectibles & Art"></option>
+                  <option value="Fashion"></option>
+                  <option value="Home & Garden"></option>
+                  <option value="Sporting Goods"></option>
+                  <option value="Health & Beauty"></option>
+                  <option value="Toys & Hobbies"></option>
+                  <option value="Books, Movies & Music"></option>
+                  <option value="Business & Industrial"></option>
+                  <option value="eBay Motors"></option>
+                  <option value="Others"></option>
+                </datalist>
+              </form>
+              <p class="itemline">Location</p>
+                <input id="findersearchlocation" class="msg editbleContent inputLocation" contenteditable="true">
+                <div class="googleMap"></div>
+              <button class="npButton">Search</button>
+            </div>
+          </div>
+        </div>
+
+      <!--final page-->
+      <div id="finalpage" class="pageTemp animafading">
+        <h1 id="finalTitle" class="outertitle">Showing results for</h1>
+        <div id="searchRequest">
+          <p id="searchBrief" class="itemline">May 10th - May 17th, Phones, Quad</p>
+          <button id="editButton">Edit Search</button>
+        </div>
+        <div id="searchResult" class="itempage">
+          <button type="button" class="collapsible lightblue">
+            <div class="resultTitle"></div>
+            <div class="moreButton">
+              More
+            </div>
+          </button>
+          <div class="content lightblue">
+            <div class="resultImg">
+              <img src="">
+            </div>
+            <div class="itemInfo">
+              <div class="detailMsg itemInfoFont">
+                <div class="msgHeader">Category: </div>
+                <div class="msgContent"></div>
+              </div>
+              <div class="detailMsg itemInfoFont">
+                <div class="msgHeader">Location: </div>
+                <div class="msgContent"></div>
+              </div>
+              <div class="detailMsg itemInfoFont">
+                <div class="msgHeader">Date: </div>
+                <div class="msgContent"></div>
+              </div>
+              <div class="resultDescription itemInfoFont"></div>
+              <button class="lessButton moreButton">Less</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </body>
+  <script type="text/javascript" src="seeker-finder.js"> </script>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuhsej5xRUk-VOXpNsEMEktAR6QPyjgFc&libraries=places&callback=initMaps">
+  </script>
+</html>

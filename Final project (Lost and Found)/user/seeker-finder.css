@@ -1,0 +1,473 @@
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.5s;
+}
+
+
+div.imageWrapper {
+  width: 30%;
+  max-width: 400px;
+  min-width: 100px;
+  margin-left: 65%;
+  margin-top: 5%;
+}
+
+.imageWrapper > img {
+  width: 100%;
+}
+
+.imageWrapper > img:hover {
+  cursor: pointer;
+}
+
+h1.hpprompt {
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  color: #142a50;
+  font-size: 20px;
+  margin: 20px 20px 20px 0;
+}
+
+button.sfbutton {
+  border-radius: 10px;
+  border-style: none;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  min-width: 250px;
+  height: 80px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  margin: 20px 20px 20px 0;
+}
+
+#fshomepage {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.lightblue {
+  background-color: #b3c1d1;
+}
+
+.yellow {
+  background-color: #daab27;
+}
+
+.lightyellow {
+  background-color: #feebb1;
+}
+
+.deepblue {
+  background-color: #142a50;
+}
+
+.animafading {
+  animation: fading 1s;
+  transition: opacity 1s;
+}
+
+@keyframes fading{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
+#finderhomepage {
+  display: none;
+}
+
+.pageTemp {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  height: 100vh;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.outertitle {
+  overflow-wrap: break-word;
+  width: auto;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  color: #142a50;
+  font-size: 35px;
+  margin: 20px 20px 20px 0;
+}
+
+.item{
+  display: flex;
+  background-color: white;
+  height: 63%;
+  min-height: 544px;
+  flex-direction: column;
+  position: relative;
+}
+
+.itempage {
+  margin: 2.5% 5% 5% 5%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemline {
+  color: #365c85;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
+.msg {
+  background-color: #e5e5e5;
+  font-family: Montserrat, sans-serif;
+  min-height: 25px;
+  font-size: 18px;
+  color: #365c85;
+  margin-bottom: 20px;
+  padding: 3px;
+}
+
+.msgdescription {
+  min-height: 180px;
+}
+
+.chooseFile {
+  border: none;
+  max-width: 25%;
+  padding: 5px 10px 5px 10px;
+  background-color: #e5e5e5;
+}
+
+.chooseFile:hover {
+  cursor: pointer;
+}
+
+.npButton {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px 10px 25px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  white-space: nowrap;
+}
+
+.npButton:hover {
+  cursor: pointer;
+}
+
+.searchBox {
+  display: flex;
+  position: relative;
+  background-color: white;
+  min-height: 30px;
+  color: #365c85;
+  margin-bottom: 7px;
+  padding: 3px;
+}
+
+.searchBox:hover {
+  cursor: pointer;
+}
+
+
+.searchBox > img {
+  width: 25px;
+  margin-left: auto;
+}
+
+#findersearchpage {
+  display: none;
+}
+
+#findersearchtext {
+  font-family: Montserrat, sans-serif;
+  min-width: 70%;
+  font-size: 20px;
+  color: #365c85;
+  padding: 3px;
+}
+
+.searchpagebgTemp {
+  min-height: 600px;
+  margin-top: 15px;
+}
+
+.searchdateNtime{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.searchdate {
+  width: 30%;
+  margin-right: 5px;
+}
+
+.searchtime {
+  width: 17.5%;
+  margin-left: 5px;
+}
+
+.search_to {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 10px;
+}
+
+
+.dateNtime{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+}
+
+.dNtdate {
+  width: 40%;
+  margin-right: 5px;
+  padding-left: 0px;
+}
+
+.dNttime {
+  width: 25%;
+  margin-left: 5px;
+  padding-left: 0px;
+}
+
+#finderitemp2 {
+  display: none;
+}
+
+#finderLocation {
+  width: 100%;
+}
+
+.amenddiv {
+  display:flex;
+  align-items: flex-end;
+}
+
+.googleMap {
+  width: 100%;
+  height: 60%;
+}
+
+.searchBar {
+  width: 100%;
+}
+
+#seekerhomepage {
+  display: none;
+}
+
+#seekersearchpage {
+  display: none;
+}
+
+#seekeritemp2 {
+  display: none;
+}
+
+input {
+  border: none;
+}
+
+#imgUploader {
+  display: none;
+}
+
+#uploadControl {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+#imgName {
+  padding: 5px 10px 5px 10px;
+}
+
+.inputCategory {
+  width: 100%;
+}
+
+/* make "dd/mm/yyyy" invisible */
+input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+input[type="date"]:in-range::-webkit-datetime-edit-day-field,
+input[type="date"]:in-range::-webkit-datetime-edit-text {
+  color: transparent;
+}
+#fshomepage {
+  display: flex;
+}
+
+#finalpage {
+  display: none;
+  flex-direction: column;
+}
+
+#searchBrief {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+#editButton {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px 10px 25px;
+  white-space: nowrap;
+  background-color: #142a50;
+}
+#searchRequest {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  display: none;
+  position: relative;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
+  height: 40%;
+  margin-bottom: 15px;
+}
+
+.resultTitle {
+  font-size: 30px;
+  color: #142a50;
+}
+
+.moreButton {
+  font-size: 30px;
+  font-weight: bold;
+  color: #142a50;
+}
+
+.resultImg {
+  width: 40%;
+  height: auto;
+  margin-right: 5px;
+}
+
+.resultImg > img {
+  width: 100%;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+  width: 60%;
+}
+
+.detailMsg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.itemInfoFont{
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+}
+
+.msgHeader {
+  font-weight: bold;
+  margin: 5px 10px 5px 0;
+}
+
+.msgContent {
+  white-space: nowrap;
+}
+
+.resultDescription {
+  color: #365c85;
+  margin-top: 5px;
+}
+
+.lessButton {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  border: none;
+}
+
+@media screen and (max-width: 600px) {
+  .itemInfoFont {
+    font-size: 15px;
+  }
+  .resultTitle {
+    font-size: 20px;
+  }
+  .moreButton {
+    font-size: 20px;
+  }
+  .outertitle {
+    font-size: 20px;
+  }
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .itemInfo {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .outertitle {
+    font-size: 25px;
+  }
+
+
+}
+
+
+@media only screen and (min-width: 700px) {
+  #fshomepage {
+    flex-direction: row;
+    margin-top: 20%;
+    justify-content: space-around;
+  }
+}

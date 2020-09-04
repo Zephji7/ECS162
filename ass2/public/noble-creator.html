@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>postcard</title>
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="postcard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Homemade+Apple|Indie+Flower|Long+Cang&display=swap">
+
+
+
+</head>
+<body onload="changeColor(0);changeFont(0)">
+
+<div class="headdiv"><p class="dancingScript">Daily Postcard Creator</p></div>
+
+<div class="centerdiv">
+    <div id="finalCard" class="theCard wheat">
+        <div class="theImage">
+            <div class="imageWrapper">
+                <img id="serverImage"/>
+            </div>
+            <div id = "controls" class="chooseImage">
+                <label id="theLabel" class="defaultFont" for="fileChooser">Choose Image</label>
+                <input type="file" id="fileChooser" accept="image/png, .jpeg, .jpg, image/gif">
+            </div>
+        </div>
+
+        <div id="finalMessage" class="theMessage" contenteditable="true">write your message here!</div>
+    </div>
+</div>
+
+<div class="footdiv">
+    <div class="designPanel">
+        <div class="chooseFont">
+            <p class="defaultFont foot">Choose your font</p>
+            <ul>
+                <li><button class="fontButton indieFlower" onclick="changeFont(0)"><span class="dimondLi">&#8900;</span>Indie Flower</button></li>
+                <li><button class="fontButton dancingScript" onclick="changeFont(1)"><span class="dimondLi">&#8900;</span>Dancing Script</button></li>
+                <li><button class="fontButton longCang" onclick="changeFont(2)"><span class="dimondLi">&#8900;</span>Long Cang</button></li>
+                <li><button class="fontButton homeMadeApple" onclick="changeFont(3)"><span class="dimondLi">&#8900;</span>Homemade Apple</button></li>
+            </ul>
+        </div>
+
+        <div class="chooseColor">
+            <p class="defaultFont foot">Choose your color</p>
+            <button class="wheat currColor" onclick="onclickColor(0)" onmouseover="previewColor(0)" onmouseout="previousColor()"></button>
+            <button class="tan currColor" onclick="onclickColor(1)" onmouseover="previewColor(1)" onmouseout="previousColor()"></button>
+            <button class="seaGreen currColor" onclick="onclickColor(2)" onmouseover="previewColor(2)" onmouseout="previousColor()"></button>
+            <button class="paleBlue currColor" onclick="onclickColor(3)" onmouseover="previewColor(3)" onmouseout="previousColor()"></button>
+            <button class="blueGray currColor" onclick="onclickColor(4)" onmouseover="previewColor(4)" onmouseout="previousColor()"></button>
+            <button class="lavender currColor" onclick="onclickColor(5)" onmouseover="previewColor(5)" onmouseout="previousColor()"></button>
+            <button class="pink currColor" onclick="onclickColor(6)" onmouseover="previewColor(6)" onmouseout="previousColor()"></button>
+            <button class="whitish currColor" onclick="onclickColor(7)" onmouseover="previewColor(7)" onmouseout="previousColor()"></button>
+            <button class="grey currColor" onclick="onclickColor(8)" onmouseover="previewColor(8)" onmouseout="previousColor()"></button>
+        </div>
+
+        <div class="defaultFont share"><button id="shareButton">Share postcard</button></div>
+    </div>
+</div>
+<script type="text/javascript" src="postcard.js"></script>
+</body>
+</html>

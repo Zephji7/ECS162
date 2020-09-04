@@ -1,0 +1,345 @@
+
+/* body style */
+body {
+    background-color: #000000;
+}
+
+
+/* header style */
+.headdiv {
+    display: flex;
+    background-color: #f2f2f2;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.headdiv > table {
+    display: flex;
+    background: none;
+    border: none;
+    margin-left: auto;
+    order: 2;
+}
+
+.navbutton {
+    color: #000000;
+    background: none;
+    border: none;
+    font-family: Montserrat, serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.headdiv > p {
+    color: #2a2d7c;
+    order: 1;
+}
+
+.headspan {
+    color: #c9523d;
+    font-weight: bold;
+}
+
+
+/*count down part style */
+.counterdiv {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    color: #f2f2f2;
+    font-size: 80px;
+    padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+/* galley part style */
+.gallerydiv {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    color: #000000;
+    font-family: "Open Sans", Serif;
+    padding: 12px;
+}
+
+.gallerytitle {
+    font-weight: 800;
+    font-size: 31px;
+    padding: 8px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.gallerysubtitle {
+    font-size: 21px;
+    padding: 8px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+div.imag {
+    position: relative;
+    background-color: #000000;
+    width: 60%;
+}
+
+.theImg {
+    animation: fading 0.2s;
+}
+
+@keyframes fading{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
+.firstimg {
+    display: block;
+}
+
+.nonfirstimg {
+    display: none;
+}
+
+div > img{
+    max-width: 100%;
+}
+
+button.css-prenexbutton {
+    color: #f2f2f2;
+    position: absolute;
+    cursor: pointer;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 30px;
+    padding: 10px;
+    font-weight: bold;
+    top: 45%;
+    font-family: "Open Sans", SansSerif;
+}
+
+button.css-prenexbutton:hover {
+    background-color: #000000;
+}
+
+button.prebutton {
+    left: 0;
+}
+
+button.nexbutton {
+    right: 0;
+}
+
+p.imgCap {
+    position: absolute;
+    width: 100%;
+    bottom: 17px;
+    color: #f2f2f2;
+    background: none;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Open Sans", SansSerif;
+}
+
+p.index {
+    position: absolute;
+    top: 12px;
+    left: 17px;
+    border: none;
+    color: #f2f2f2;
+    font-size: 15px;
+}
+
+.thisImgbutton {
+    height: 17px;
+    width: 17px;
+    background-color: #000000;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-right: 1.5px;
+    margin-left: 1.5px;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: opacity 1s;
+}
+
+button.thisImgbutton:hover {
+    opacity: 0.7;
+}
+
+.opa07 {
+    opacity: 0.7;
+}
+
+div.content {
+    width: 58%;
+    max-width: 1000px;
+    font-size: 18px;
+    font-family: "Open Sans", SansSerif;
+}
+
+.content > p {
+    margin: 15px;
+
+}
+
+
+/* footer style */
+.footdiv {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: #c6d2da;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Montserrat", Serif;
+}
+
+.footer > p {
+    font-weight: 900;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.footcontent {
+    font-size: 12px;
+}
+
+.hours {
+    padding: 5px;
+}
+
+#footer1st {
+    flex-basis: 15%;
+}
+
+#footer2nd {
+    flex-basis: 25%;
+}
+
+#footer3rd {
+    flex-basis: 60%;
+}
+
+
+/* media query */
+
+@media screen and (max-width: 600px) {
+    /* header style */
+    .headdiv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headdiv > table {
+        margin-right: auto;
+        max-width: 100%;
+        flex-basis: fit-content;
+        border: 1px black;
+    }
+
+    .navbutton {
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    /* counter style */
+    .counterdiv {
+        max-font-size: 55px;
+        flex: content;
+    }
+
+    /* gallery style */
+
+    .gallerydiv{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border: 0;
+        flex: 0 0 100%;
+    }
+
+    .gallerytitle {
+        max-width: 80%;
+    }
+
+    .gallerysubtitle {
+        max-width: 80%;
+    }
+
+    div.imag {
+        width:100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    div > img {
+        padding-bottom: 40px;
+    }
+
+    p.imgCap {
+        font-size: 13px;
+        bottom: 7px;
+    }
+
+    button.css-prenexbutton {
+        font-size: 15px;
+        top: 45%;
+    }
+
+    button.thisImgbutton {
+        margin-top: 15px;
+        margin-bottom: 0px;
+    }
+
+    div.content {
+        width: 95%;
+        font-size: 15px;
+    }
+
+    /* footer style */
+    div.footdiv {
+        flex-direction: column-reverse;
+    }
+
+    #footer3rd {
+        padding-bottom: 10px;
+    }
+
+    #footer2nd {
+        padding-bottom: 10px;
+    }
+
+    .hours {
+        padding: 1px;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    div.imag {
+        width: 85%;
+    }
+
+    div.counterdiv {
+        font-size: 75px;
+    }
+
+    div.content {
+        width: 85%;
+    }

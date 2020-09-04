@@ -1,0 +1,56 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Welcome to Glitch!</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      function showalert() {
+        const queryId = window.location.search;
+        if (queryId=='?email=notUCD') {
+            window.alert("Please login in with your UCDavis account!");
+        }
+      }
+    </script>
+    <meta name="description" content="A cool thing made with Glitch" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/webpage/reset.css"/>
+    <link rel="stylesheet" href="/webpage/style.css" />
+    <link href="//fonts.googleapis.com/css?family=Montserrat:bold, regular"
+          rel="stylesheet" type="text/css" />
+
+  </head>
+  <body onload="showalert()">
+    <main class="background-blue">
+      <div class="imageWrapper">
+        <img  id="shield" src="/images/Shield.jpg">
+      </div>
+      <div id="begin-page">
+        <div id="title">
+          <img src="/images/Logo.png">
+        </div>
+        <div id="login-portal">
+          <div id="google-logo">
+            <img src="/images/google.png">
+          </div>
+          <a href="auth/google">
+            <button id="login-button">
+              Login with Google
+            </button>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+
+</html>

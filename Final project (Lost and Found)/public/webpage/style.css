@@ -1,0 +1,139 @@
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 1000px;
+}
+
+img {
+  width: 100%;
+}
+
+.background-blue{
+  background-color: #365c85;
+}
+
+#begin-page{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+}
+
+#title{
+  width: 60%;
+  max-width: 600px;
+  height: auto;
+  margin: 20px;
+}
+
+#login-portal {
+  display: flex;
+  border-radius: 10px;
+  width: 40%;
+  max-width: 400px;
+  min-height: 40px;
+  max-height: 80px;
+  background-color: white;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#google-logo {
+  width: 20%;
+  max-width: 70px;
+  height: auto;
+  margin: 5% 0 5% 5%;
+}
+
+#login-button {
+  border: none;
+  width: 60%;
+  font-family: Montserrat, sans-serif;
+  font-size: 10px;
+  background-color: white;
+  margin-right: 5%;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 400px) {
+  #login-button {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  #login-button {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #login-button {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  #login-button {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #login-button {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #login-button {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  main{
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .imageWrapper{
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+  }
+
+  #shield{
+    height: 100%;
+    width: auto;
+    margin-left: -80%;
+  }
+
+  #begin-page{
+    width: 50%;
+  }
+
+  #login-button {
+    font-size: 20px;
+  }
+
+  #title{
+    width: 80%;
+    margin: 10%;
+  }
+}
